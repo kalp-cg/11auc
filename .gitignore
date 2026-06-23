@@ -1,0 +1,31 @@
+# Node dependency folders
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment files
+.env
+client/.env
+server/.env
+*.env
+
+# Build outputs
+client/dist/
+dist/
+
+# IDE / System files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Brain logs & System generated files
+.system_generated/
+.gemini/
+brain/
+logs/
+*.log
