@@ -27,7 +27,7 @@ Follow this guide to deploy your production-ready AuctionX full-stack applicatio
    - `JWT_SECRET`: *[A strong custom secret key]*
    - `JWT_EXPIRES_IN`: `7d`
    - `CLIENT_URL`: *[URL of your frontend deployed on Vercel]*
-5. Deploy the web service. Note the service URL (e.g. `https://auctionx-server.onrender.com`).
+5. Deploy the web service. Note the service URL (which is `https://one1auc.onrender.com`).
 
 ---
 
@@ -40,7 +40,7 @@ Follow this guide to deploy your production-ready AuctionX full-stack applicatio
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
 4. Configure **Environment Variables** in Vercel's dashboard:
-   - `VITE_API_URL`: `https://auctionx-server.onrender.com/api`
-   - `VITE_SOCKET_URL`: `https://auctionx-server.onrender.com`
+   - `VITE_API_URL`: `https://one1auc.onrender.com/api`
+   - `VITE_SOCKET_URL`: `https://one1auc.onrender.com`
 5. Click **Deploy**. Note your live frontend URL.
 6. Remember to go back to **Render** and update the `CLIENT_URL` env variable with your live Vercel frontend URL to allow cross-origin socket connections (CORS).

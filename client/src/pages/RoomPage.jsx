@@ -60,7 +60,7 @@ export const RoomPage = () => {
         if (res.room.status === 'completed') {
           // Fetch results from DB if available
           const response = await fetch(
-            `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/rooms/${code}`,
+            `${import.meta.env.VITE_API_URL || 'https://one1auc.onrender.com/api'}/rooms/${code}`,
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -71,7 +71,7 @@ export const RoomPage = () => {
           if (details.success && details.room.status === 'completed') {
             // Fetch the populated result object from api
             const resData = await fetch(
-              `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/rooms/${room?._id || details.room._id}/results`,
+              `${import.meta.env.VITE_API_URL || 'https://one1auc.onrender.com/api'}/rooms/${room?._id || details.room._id}/results`,
               {
                 headers: {
                   Authorization: `Bearer ${localStorage.getItem('token')}`

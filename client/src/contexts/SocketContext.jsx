@@ -21,7 +21,7 @@ export const SocketProvider = ({ children }) => {
       return;
     }
 
-    const socketUrl = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000';
+    const socketUrl = import.meta.env.VITE_SOCKET_URL || 'https://one1auc.onrender.com';
     const token = localStorage.getItem('token');
 
     // Create authenticated socket connection
