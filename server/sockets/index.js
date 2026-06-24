@@ -14,7 +14,10 @@ const activePresence = {};
 const initSockets = (server) => {
   const io = socketIO(server, {
     cors: {
-      origin: process.env.CLIENT_URL || 'http://localhost:5173',
+      origin: (origin, callback) => {
+        // Allow any requesting origin dynamically (crucial for credentials-based authentication)
+        callback(null, true);
+      },
       methods: ['GET', 'POST'],
       credentials: true
     }

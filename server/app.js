@@ -12,7 +12,10 @@ const app = express();
 // Middlewares
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: (origin, callback) => {
+      // Allow any requesting origin dynamically (crucial for credentials-based authentication)
+      callback(null, true);
+    },
     credentials: true
   })
 );
